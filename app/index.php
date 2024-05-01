@@ -39,6 +39,8 @@ if (isset($_GET['page'])){
     include('dashboard.php');
   }else if($_GET['page']=='data-mahasiswa'){
     include('data_mahasiswa.php');
+  }else if($_GET['page']=='edit-data'){
+    include('edit/edit_data.php');
   }else{
     include('not-found.php');
   }

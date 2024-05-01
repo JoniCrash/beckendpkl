@@ -36,9 +36,11 @@
                     <td><?php echo $mhs ['nama'];?></td>
                     <td><?php echo $mhs ['nim'];?></td>
                     <td><?php echo $mhs ['semester'];?></td>
-                    <td><a onclick="hapus_data(<?php echo $mhs ['id'];?>)" class="btn btn-sm btn-danger">Hapus</a></td>
+                    <td>
+                      <a onclick="hapus_data(<?php echo $mhs ['id'];?>)" class="btn btn-sm btn-danger">Hapus</a>
+                      <a href="index.php?page=edit-data&&id=<?php echo $mhs ['id'];?>" class="btn btn-sm btn-success">Edit</a>
+                    </td>
                   </tr>
-                  
                   <?php }?>
                   </tbody>
                   <tfoot>
@@ -88,14 +90,13 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-sm-2" for="smt">Semester:</label>
-                  <div class="col-sm-10" name = "semester">
-                    <select class="form-select" aria-label="Default select example" required>
+                  <label >Semester:</label>
+                    <select class="form-select" name = "semester" required>
                     <option selected>Pilih</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    <option value="3">4</option>
+                    <option value="4">4</option>
                   </select>
                   </div>
                 </div>
