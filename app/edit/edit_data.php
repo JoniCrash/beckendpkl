@@ -13,7 +13,7 @@ $view = mysqli_fetch_array($query);
         </div>
               <!-- /.card-header -->
             <div class="card-body">
-                <form method='get' action='update/update_data.php'>
+                <form method='post' action='update/update_data.php' enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- text input -->
@@ -44,10 +44,19 @@ $view = mysqli_fetch_array($query);
                   </select>
                       </div>
                     </div>
+                    <div class="col-sm-6">
+                    <label class="from-label" for="customFile">Upload Foto</label>
+                    <input type="file" name="foto" class="form-control" id="customFile"/>
+                    </div>
                   </div>
-                      <!-- select -->
-
+                  <div class="row"> 
+                  <div class="col-sm-12">
+                  <img src="foto/<?php echo $view['foto'];?>" width="100px" class="rounded"/>
+                  </div>
+                  </div>
+                  <div class="row">
                       <button type="submit" class="btn btn-info">Simpan</button>
+                  </div>
                 </form>
             </div>
               <!-- /.card-body -->
